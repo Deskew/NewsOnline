@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="NewsOnline.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <header>
+                <div id="top-bar">
+                    <li><a href="Login.aspx">Login<i class="fa fa-lock"></i></a></li>
+                </div>
+
+                <div class="logo" style="text-transform:uppercase;">
+                    <h3><span>学院在线</span></h3>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="Default.aspx">最新要闻</a></li>
+                        <li><a href="All_News.aspx">所有要闻</a></li>
+                        <li><a href="News_Type1.aspx">按类别检索新闻</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+            </div>
+
+            <footer>
+                <div id="footer-nav">
+                    <ul>
+                         <li><a href="Default.aspx">最新要闻</a></li>
+                        <li><a href="All_News.aspx">所有要闻</a></li>
+                        <li><a href="News_Type1.aspx">按类别检索新闻</a></li>
+                    </ul>
+                </div>
+
+                <div id="footer-kontakt">
+                    <asp:Literal ID="litKontakt" runat="server" />
+                </div>
+
+                <div id="footer-socialmedia">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
+

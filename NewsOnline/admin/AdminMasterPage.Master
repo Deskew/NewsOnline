@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="NewsOnline.admin.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Dr+Sugiyama" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <header>
+                <a href="Default.aspx">Default.aspx</a>
+                <div id="top-bar">
+                    <li class="login-name"><asp:Literal ID="litUser" runat="server" /></li>
+                    <li><asp:Button ID="btnLogout" runat="server" Text="logout" OnClick="btnLogout_Click" CssClass="top-bar-logout" /><i class="fa fa-lock"></i></li>
+                </div>
+
+                <div class="logo" style="text-transform:uppercase;">
+                    <h3><span>学院在线</span></h3>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../Default.aspx">最新要闻</a></li>
+                        <li><a href="../All_News.aspx">所有新闻</a></li>
+                        <li><a href="../News_Type1.aspx">按类别检索新闻</a></li>
+                    </ul>
+                </nav>
+
+                <div id="adminbar">
+                    <ul class="drop_menu">
+                        <li><a href="Default.aspx">Admin.Default</a></li>
+                        <li><a href="#">管理新闻</a>
+                            <ul>
+                                <li><a href="NewsCreate.aspx">新建</a></li>
+                                <li><a href="NewsEditDelete.aspx">编辑/删除</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">管理联系列表</a>
+                            <ul>
+                                <li><a href="ContactEdit.aspx">编辑</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </header>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
